@@ -19,7 +19,7 @@ describe('Math class', function () {
     // é necessário conhecer o contexto da execução (this):
     this.timeout(3000); // ! logo o MOCHA não recomenda que usemos arrow functions com o it
 
-    math.sum(5, 5, (value) => {
+    math.sum(value, 5, value => {
       assert.equal(value, 10);
       done(); // done é requerido para métodos assíncronos
     });
@@ -43,7 +43,7 @@ describe('Math class', function () {
 
   /// hooks: forma de executar codigo e evitar repeticao
   let value = 0;
-   // antes de cada função de teste esta função é executada
+  // antes de cada função de teste esta função é executada
   beforeEach(function () {
     value = 0;
   });
