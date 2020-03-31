@@ -35,8 +35,5 @@ describe('Math class', function () {
 
     // verificar se são iguais:
     expect(obj).to.deep.equal(obj2);
-
-
-
   });
 });
